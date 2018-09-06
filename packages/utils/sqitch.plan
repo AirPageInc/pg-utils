@@ -7,3 +7,6 @@ procedures/get_schema_from_str 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62>
 procedures/list_indexes [procedures/get_entity_from_str procedures/get_schema_from_str] 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/list_indexes
 procedures/list_memberships 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/list_memberships
 procedures/stamp_updated_at_column 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/stamp_updated_at_column
+procedures/drop_function 2018-09-06T04:30:33Z Dan Lynch <dlynch@Dans-MacBook-Pro.local> # add procedures/drop_function
+procedures/grant_execute_on_function 2018-09-06T04:30:48Z Dan Lynch <dlynch@Dans-MacBook-Pro.local> # add procedures/grant_execute_on_function
+procedures/revoke_execute_on_function 2018-09-06T04:30:54Z Dan Lynch <dlynch@Dans-MacBook-Pro.local> # add procedures/revoke_execute_on_function

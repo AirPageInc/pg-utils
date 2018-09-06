@@ -33,6 +33,52 @@ DECLARE
 END;
 $EOFCODE$ LANGUAGE plpgsql STRICT;
 
+CREATE FUNCTION drop_function ( _functionname text, OUT func_drops int ) AS $EOFCODE$
+DECLARE
+    _sql text;
+BEGIN
+    SELECT
+        count(*)::int,
+        string_agg(format('DROP FUNCTION %s(%s);', p.oid::regproc, pg_get_function_identity_arguments(p.oid)), ' ')
+    FROM
+        pg_catalog.pg_proc p
+        JOIN pg_catalog.pg_namespace n ON n.oid = p.pronamespace
+    WHERE
+        n.nspname = get_schema_from_str (_functionname)
+        AND p.proname = get_entity_from_str (_functionname) INTO func_drops, _sql;
+    IF func_drops > 0 THEN
+        EXECUTE _sql;
+    ELSE
+        RAISE
+        EXCEPTION 'Nonexistent function --> %s', _functionname
+            USING HINT = 'Please check';
+    END IF;
+END
+$EOFCODE$ LANGUAGE plpgsql;
+
+CREATE FUNCTION grant_execute_on_function ( _functionname text, _role text, OUT func_grants int ) AS $EOFCODE$
+DECLARE
+    _sql text;
+BEGIN
+    SELECT
+        count(*)::int,
+        string_agg(format('GRANT EXECUTE ON FUNCTION %s(%s) TO %s;', p.oid::regproc, pg_get_function_identity_arguments(p.oid), _role), ' ')
+    FROM
+        pg_catalog.pg_proc p
+        JOIN pg_catalog.pg_namespace n ON n.oid = p.pronamespace
+    WHERE
+        n.nspname = get_schema_from_str (_functionname)
+        AND p.proname = get_entity_from_str (_functionname) INTO func_grants, _sql;
+    IF func_grants > 0 THEN
+        EXECUTE _sql;
+    ELSE
+        RAISE
+        EXCEPTION 'Nonexistent function --> %s', _functionname
+            USING HINT = 'Please check';
+    END IF;
+END
+$EOFCODE$ LANGUAGE plpgsql;
+
 CREATE FUNCTION list_indexes ( _table text, _index text ) RETURNS TABLE ( schema_name text, table_name text, index_name text ) AS $EOFCODE$
 SELECT
     n.nspname::text AS schema_name,
@@ -74,6 +120,29 @@ FROM
 WHERE
     pg_roles.oid = c.oid;
 $EOFCODE$ LANGUAGE sql IMMUTABLE;
+
+CREATE FUNCTION revoke_execute_on_function ( _functionname text, _role text, OUT func_revocations int ) AS $EOFCODE$
+DECLARE
+    _sql text;
+BEGIN
+    SELECT
+        count(*)::int,
+        string_agg(format('REVOKE EXECUTE ON FUNCTION %s(%s) FROM %s;', p.oid::regproc, pg_get_function_identity_arguments(p.oid), _role), ' ')
+    FROM
+        pg_catalog.pg_proc p
+        JOIN pg_catalog.pg_namespace n ON n.oid = p.pronamespace
+    WHERE
+        n.nspname = get_schema_from_str (_functionname)
+        AND p.proname = get_entity_from_str (_functionname) INTO func_revocations, _sql;
+    IF func_revocations > 0 THEN
+        EXECUTE _sql;
+    ELSE
+        RAISE
+        EXCEPTION 'Nonexistent function --> %s', _functionname
+            USING HINT = 'Please check';
+    END IF;
+END
+$EOFCODE$ LANGUAGE plpgsql;
 
 CREATE FUNCTION stamp_updated_at_column (  ) RETURNS trigger AS $EOFCODE$
 BEGIN
