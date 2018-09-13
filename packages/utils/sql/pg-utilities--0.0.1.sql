@@ -146,7 +146,11 @@ $EOFCODE$ LANGUAGE plpgsql;
 
 CREATE FUNCTION stamp_updated_at_column (  ) RETURNS trigger AS $EOFCODE$
 BEGIN
-    NEW.updated_at = now();
+    -- cheap way to ensure created_at is immutable
+    NEW.created_at = OLD.created_at;
+
+    -- updated_at
+    NEW.updated_at = NOW();
     RETURN NEW;
 END;
 $EOFCODE$ LANGUAGE plpgsql;

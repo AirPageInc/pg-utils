@@ -5,7 +5,11 @@ BEGIN;
 CREATE FUNCTION stamp_updated_at_column()
 RETURNS TRIGGER AS $$
 BEGIN
-    NEW.updated_at = now();
+    -- cheap way to ensure created_at is immutable
+    NEW.created_at = OLD.created_at;
+
+    -- updated_at
+    NEW.updated_at = NOW();
     RETURN NEW;
 END;
 $$ language 'plpgsql';
