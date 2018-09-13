@@ -1,4 +1,4 @@
--- Verify procedures/stamp_updated_at_column on pg
+-- Verify procedures/tg_update_timestamps on pg
 
 BEGIN;
 
