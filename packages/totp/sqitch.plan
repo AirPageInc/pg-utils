@@ -1,0 +1,7 @@
+%syntax-version=1.0.0
+  %project=pg-totp
+  
+extensions/app-extensions 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add extensions/app-extensions
+procedures/base32_encode 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/base32_encode
+procedures/generate_secret_ascii 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/generate_secret_ascii
+procedures/generate_secret [procedures/generate_secret_ascii procedures/base32_encode] 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/generate_secret

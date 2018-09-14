@@ -1,0 +1,7 @@
+# pg-totp extension
+comment = 'PostgreSQL implementation of TOTP'
+default_version = '0.0.1'
+module_pathname = '$libdir/pg-totp'
+requires = 'plpgsql,pgcrypto'
+relocatable = false
+superuser = false
