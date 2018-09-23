@@ -1,0 +1,8 @@
+%syntax-version=1.0.0
+  %project=skitch-ext-defaults
+  %uri=npm:skitch-ext-defaults
+
+
+roles/administrator/role 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add roles/administrator/role
+roles/anonymous/role 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add roles/anonymous/role
+roles/authenticated/role 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add roles/authenticated/role
