@@ -1,4 +1,4 @@
-\echo Use "CREATE EXTENSION skitch-ext-jobs" to load this file. \quit
+\echo Use "CREATE EXTENSION skitch-extension-jobs" to load this file. \quit
 CREATE SCHEMA app_jobs;
 
 CREATE TABLE app_jobs.jobs (

@@ -1,4 +1,4 @@
-\echo Use "CREATE EXTENSION skitch-ext-verify" to load this file. \quit
+\echo Use "CREATE EXTENSION skitch-extension-verify" to load this file. \quit
 CREATE FUNCTION verify_constraint ( _table text, _name text ) RETURNS boolean AS $EOFCODE$
 BEGIN
     IF EXISTS (

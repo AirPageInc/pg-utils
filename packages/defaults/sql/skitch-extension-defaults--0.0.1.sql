@@ -1,4 +1,4 @@
-\echo Use "CREATE EXTENSION skitch-ext-defaults" to load this file. \quit
+\echo Use "CREATE EXTENSION skitch-extension-defaults" to load this file. \quit
 DO $$
   BEGIN
     IF NOT EXISTS (

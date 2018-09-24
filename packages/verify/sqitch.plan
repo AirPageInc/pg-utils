@@ -1,8 +1,9 @@
 %syntax-version=1.0.0
-  %project=skitch-ext-verify
-  %uri=npm:skitch-ext-verify
+  %project=skitch-extension-verify
+  %uri=skitch-extension-verify
 
-procedures/verify_constraint [skitch-ext-utilities:procedures/tg_update_timestamps] 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_constraint
+  
+procedures/verify_constraint [skitch-extension-utilities:procedures/tg_update_timestamps] 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_constraint
 procedures/verify_domain 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_domain
 procedures/verify_extension 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_extension
 procedures/verify_function 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_function

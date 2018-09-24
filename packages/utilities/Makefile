@@ -1,5 +1,5 @@
-EXTENSION = skitch-ext-utilities
-DATA = sql/skitch-ext-utilities--0.0.2.sql
+EXTENSION = skitch-extension-utilities
+DATA = sql/skitch-extension-utilities--0.0.1.sql
 
 PG_CONFIG = pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)

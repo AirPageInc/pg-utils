@@ -1,6 +1,6 @@
 {
-  "name": "skitch-ext-utilities",
-  "version": "0.0.2",
+  "name": "skitch-extension-utilities",
+  "version": "0.0.1",
   "description": "PostgreSQL utilities",
   "author": "Dan Lynch <pyramation@gmail.com>"
 }
