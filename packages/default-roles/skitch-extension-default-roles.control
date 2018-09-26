@@ -1,6 +1,6 @@
 # skitch-extension-default-roles extension
 comment = 'default roles'
-default_version = '0.0.2'
+default_version = '0.0.3'
 module_pathname = '$libdir/skitch-extension-default-roles'
 requires = 'plpgsql,skitch-extension-verify'
 relocatable = false
