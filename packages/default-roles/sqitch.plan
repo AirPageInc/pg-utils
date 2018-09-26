@@ -1,0 +1,9 @@
+%syntax-version=1.0.0
+  %project=skitch-extension-default-roles
+  %uri=skitch-extension-default-roles
+
+
+roles/administrator/role [skitch-extension-verify:@0.0.2] 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add roles/administrator/role
+roles/anonymous/role 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add roles/anonymous/role
+roles/authenticated/role 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add roles/authenticated/role
+@0.0.2 2018-09-26T19:30:00Z Dan Lynch <dlynch@Dans-MacBook-Pro.local> # tag 0.0.2

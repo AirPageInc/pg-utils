@@ -1,6 +1,6 @@
 %syntax-version=1.0.0
-  %project=skitch-extension-utilities
-  %uri=skitch-extension-utilities
+  %project=skitch-extension-utils
+  %uri=skitch-extension-utils
 
   
 procedures/get_entity_from_str 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/get_entity_from_str
@@ -8,3 +8,4 @@ procedures/get_schema_from_str 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62>
 procedures/list_indexes [procedures/get_entity_from_str procedures/get_schema_from_str] 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/list_indexes
 procedures/list_memberships 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/list_memberships
 procedures/tg_update_timestamps 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/tg_update_timestamps
+@0.0.2 2018-09-26T19:31:13Z Dan Lynch <dlynch@Dans-MacBook-Pro.local> # tag 0.0.2

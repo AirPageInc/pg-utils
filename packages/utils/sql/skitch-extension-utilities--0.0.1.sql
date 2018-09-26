@@ -1,4 +1,4 @@
-\echo Use "CREATE EXTENSION skitch-extension-utilities" to load this file. \quit
+\echo Use "CREATE EXTENSION skitch-extension-utils" to load this file. \quit
 CREATE FUNCTION get_entity_from_str ( qualified_name text ) RETURNS text AS $EOFCODE$
 DECLARE
     parts text[];
