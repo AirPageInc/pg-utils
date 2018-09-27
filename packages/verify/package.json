@@ -1,9 +1,9 @@
 {
   "name": "skitch-extension-verify",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "PostgreSQL verification utilities",
   "author": "Dan Lynch <pyramation@gmail.com>",
   "dependencies": {
-    "skitch-extension-utils": "^0.0.6"
+    "skitch-extension-utils": "^0.0.7"
   }
 }

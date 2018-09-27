@@ -62,7 +62,7 @@ DECLARE
 BEGIN
     IF (_user IS NOT NULL) THEN
       check_user = _user;
-    ELSE;
+    ELSE
       check_user = current_user;
     END IF;
     IF EXISTS (

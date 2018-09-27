@@ -3,7 +3,7 @@
   %uri=skitch-extension-verify
 
 
-procedures/verify_constraint [skitch-extension-utils:@0.0.6] 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_constraint
+procedures/verify_constraint [skitch-extension-utils:@0.0.7] 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_constraint
 procedures/verify_domain 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_domain
 procedures/verify_extension 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_extension
 procedures/verify_function 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_function
@@ -18,4 +18,4 @@ procedures/verify_table 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add 
 procedures/verify_trigger 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_trigger
 procedures/verify_type 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_type
 procedures/verify_view 2017-08-11T08:11:51Z skitch <skitch@5b0c196eeb62> # add procedures/verify_view
-@0.0.6 2018-09-26T19:31:20Z Dan Lynch <dlynch@Dans-MacBook-Pro.local> # tag 0.0.6
+@0.0.7 2018-09-26T19:31:20Z Dan Lynch <dlynch@Dans-MacBook-Pro.local> # tag 0.0.7
