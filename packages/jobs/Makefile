@@ -1,5 +1,5 @@
 EXTENSION = skitch-extension-jobs
-DATA = sql/skitch-extension-jobs--0.0.3.sql
+DATA = sql/skitch-extension-jobs--0.0.4.sql
 
 
 PG_CONFIG = pg_config
