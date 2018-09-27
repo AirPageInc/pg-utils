@@ -2,6 +2,6 @@
 
 BEGIN;
 
-SELECT verify_function ('app_jobs.do_notify', 'postgres');
+SELECT verify_function ('app_jobs.do_notify');
 
 ROLLBACK;

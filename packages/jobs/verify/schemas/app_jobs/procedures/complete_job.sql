@@ -2,6 +2,6 @@
 
 BEGIN;
 
-SELECT verify_function ('app_jobs.complete_job', 'postgres');
+SELECT verify_function ('app_jobs.complete_job');
 
 ROLLBACK;

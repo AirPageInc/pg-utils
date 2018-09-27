@@ -56,11 +56,18 @@ BEGIN
 END;
 $EOFCODE$ LANGUAGE plpgsql IMMUTABLE;
 
-CREATE FUNCTION verify_function ( _name text, _user text ) RETURNS boolean AS $EOFCODE$
+CREATE FUNCTION verify_function ( _name text, _user text DEFAULT NULL ) RETURNS boolean AS $EOFCODE$
+DECLARE
+  check_user text;
 BEGIN
+    IF (_user IS NOT NULL) THEN
+      check_user = _user;
+    ELSE;
+      check_user = current_user;
+    END IF;
     IF EXISTS (
             SELECT
-                has_function_privilege(_user, p.oid, 'execute')
+                has_function_privilege(check_user, p.oid, 'execute')
             FROM
                 pg_catalog.pg_proc p
                 JOIN pg_catalog.pg_namespace n ON n.oid = p.pronamespace

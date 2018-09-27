@@ -2,8 +2,6 @@
 
 BEGIN;
 
-SELECT
-    verify_function ('public.verify_trigger',
-        'postgres');
+SELECT verify_function ('public.verify_trigger');
 
 ROLLBACK;

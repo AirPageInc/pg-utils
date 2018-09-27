@@ -2,7 +2,7 @@
 
 BEGIN;
 
-SELECT verify_function ('app_jobs.tg_increase_job_queue_count', 'postgres'); 
+SELECT verify_function ('app_jobs.tg_increase_job_queue_count'); 
 SELECT verify_trigger ('app_jobs.increase_job_queue_count');
 
 ROLLBACK;

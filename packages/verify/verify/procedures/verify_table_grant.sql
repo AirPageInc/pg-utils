@@ -2,8 +2,6 @@
 
 BEGIN;
 
-SELECT
-    verify_function ('public.verify_table_grant',
-        'postgres');
+SELECT verify_function ('public.verify_table_grant');
 
 ROLLBACK;

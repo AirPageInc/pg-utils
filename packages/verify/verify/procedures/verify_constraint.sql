@@ -2,8 +2,6 @@
 
 BEGIN;
 
-SELECT
-    verify_function ('public.verify_constraint',
-        'postgres');
+SELECT verify_function ('public.verify_constraint');
 
 ROLLBACK;

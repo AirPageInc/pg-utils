@@ -2,8 +2,6 @@
 
 BEGIN;
 
-SELECT
-    verify_function ('public.verify_schema',
-        'postgres');
+SELECT verify_function ('public.verify_schema');
 
 ROLLBACK;

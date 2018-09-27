@@ -2,6 +2,6 @@
 
 BEGIN;
 
-SELECT verify_function ('app_jobs.tg__add_job_for_row', 'postgres');
+SELECT verify_function ('app_jobs.tg__add_job_for_row');
 
 ROLLBACK;

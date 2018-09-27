@@ -2,6 +2,6 @@
 
 BEGIN;
 
-SELECT verify_function ('public.verify_extension', 'postgres');
+SELECT verify_function ('public.verify_extension');
 
 ROLLBACK;
